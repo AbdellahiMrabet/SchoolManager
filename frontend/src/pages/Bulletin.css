@@ -1,0 +1,623 @@
+/* src/pages/Bulletin.css */
+
+.bulletin-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e2e8f0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.bulletin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 3px solid #2a6df4;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.school-name h1 {
+  color: #0b1a33;
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.school-name h2 {
+  color: #2a6df4;
+  margin: 6px 0 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.bulletin-info {
+  text-align: start;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.bulletin-info p {
+  margin: 4px 0;
+}
+
+/* Student Info */
+.student-info {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 18px 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #64748b;
+  min-width: 95px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.info-item span {
+  color: #0b1a33;
+  font-weight: 500;
+}
+
+/* Grades Table */
+.grades-table-container {
+  overflow-x: auto;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.bulletin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.bulletin-table thead th {
+  background: #f1f5f9;
+  color: #0b1a33;
+  font-weight: 600;
+  padding: 12px 14px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.bulletin-table tbody td {
+  padding: 12px 14px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.bulletin-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.bulletin-table tbody tr:hover {
+  background: #f1f5f9;
+}
+
+.bulletin-table .subject-name {
+  text-align: start;
+  font-weight: 600;
+  color: #0b1a33;
+  padding-inline-start: 16px;
+}
+
+.bulletin-table .total-row {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+.bulletin-table .total-row td {
+  padding: 14px;
+  font-size: 15px;
+  color: #0b1a33;
+  border-top: 2px solid #cbd5e1;
+}
+
+/* Primary Level Specific Styles */
+.primary-bulletin {
+  padding: 40px;
+}
+
+.primary-bulletin-grid {
+  margin: 24px 0;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.primary-subject-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.primary-subject-table thead th {
+  background: #f1f5f9;
+  padding: 12px 14px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  font-weight: 600;
+  color: #0b1a33;
+}
+
+.primary-subject-table .column-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  padding: 14px;
+}
+
+.primary-subject-table .arabic-title {
+  background: #eff6ff;
+  color: #1e40af;
+  border-bottom: 2px solid #bfdbfe;
+}
+
+.primary-subject-table .french-title {
+  background: #fdf2f8;
+  color: #9d174d;
+  border-bottom: 2px solid #fbcfe8;
+}
+
+.primary-subject-table tbody td {
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.primary-subject-table .subject-name {
+  text-align: start;
+  font-weight: 600;
+  color: #0b1a33;
+  padding-inline-start: 16px;
+  min-width: 140px;
+}
+
+.primary-subject-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.primary-subject-table tbody tr:hover {
+  background: #f1f5f9;
+}
+
+.primary-subject-table .sum-row {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+.primary-subject-table .sum-row td {
+  padding: 12px 14px;
+  border-top: 2px solid #cbd5e1;
+  color: #0b1a33;
+}
+
+/* Homework grades */
+.homework-grades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.homework-grades span {
+  padding: 3px 6px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+}
+
+/* Overall Average Row */
+.overall-average-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 24px;
+  margin-top: 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 2px solid #2a6df4;
+  gap: 16px;
+  margin-inline-start: auto;
+  max-width: 320px;
+}
+
+.overall-average-label {
+  font-size: 15px;
+  color: #0b1a33;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.overall-average-value {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* Stats Row Styling */
+.bulletin-table .stats-row td {
+  background: #f8fafc;
+  padding: 12px 14px !important;
+  border-top: 1.5px solid #cbd5e1;
+}
+
+.bulletin-table .stats-row .stats-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.bulletin-table .stats-row .stats-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.bulletin-table .stats-row .stats-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0b1a33;
+  margin-inline-start: 8px;
+}
+
+.bulletin-table .stats-row .stats-value:last-child {
+  margin-inline-start: 0;
+}
+
+/* Footer */
+.bulletin-footer {
+  border-top: 2px solid #e2e8f0;
+  padding-top: 24px;
+  margin-top: 32px;
+}
+
+.signature-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.signature-line {
+  font-size: 14px;
+  color: #475569;
+  padding: 16px 4px 8px 4px;
+  border-bottom: 1px dashed #cbd5e1;
+  font-weight: 500;
+}
+
+.bulletin-notes {
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+  line-height: 1.6;
+}
+
+.bulletin-notes p {
+  margin: 4px 0;
+}
+
+/* Selection Controls */
+.selection-controls {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-success {
+  background: #0f7b3a;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.btn-success:hover {
+  background: #0a5e2c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 123, 58, 0.25);
+}
+
+/* Interactive Grade Colors (Screen View Only) */
+.grade-pass {
+  color: #0f7b3a;
+  font-weight: 700;
+}
+
+.grade-fail {
+  color: #b34033;
+  font-weight: 700;
+}
+
+/* src/pages/Bulletin.css - Update the print section */
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Hide the HTML text header so it doesn't double up with the background header image */
+  .bulletin-header {
+    display: none !important;
+  }
+
+  /* Remove the height spacer in print */
+  .bulletin-container > div:first-child,
+  .primary-bulletin > div:first-child {
+    display: none !important;
+  }
+
+  .bulletin-container {
+    width: 100% !important;
+    max-width: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  /* Move content DOWN to align with header graphic */
+  .student-info {
+    background: rgba(248, 250, 252, 0.85) !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 4px 12px !important;
+    margin-top: 50mm !important;
+    margin-bottom: 4px !important;
+  }
+
+  .grades-table-container,
+  .primary-bulletin-grid {
+    margin-top: 2px !important;
+    margin-bottom: 4px !important;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .bulletin-table,
+  .primary-subject-table {
+    background: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .bulletin-table tr, 
+  .primary-subject-table tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .bulletin-table thead th,
+  .primary-subject-table thead th {
+    background: #e2e8f0 !important;
+    color: #0b1a33 !important;
+    padding: 3px 6px !important;
+    font-size: 9px !important;
+  }
+
+  .primary-subject-table tbody td,
+  .bulletin-table tbody td {
+    padding: 3px 5px !important;
+    font-size: 10px !important;
+  }
+
+  .primary-subject-table .arabic-title {
+    background: #dbeafe !important;
+    color: #1e40af !important;
+  }
+
+  .primary-subject-table .french-title {
+    background: #fce7f3 !important;
+    color: #9d174d !important;
+  }
+
+  .bulletin-table .total-row,
+  .primary-subject-table .sum-row,
+  .bulletin-table .stats-row td {
+    background: #e2e8f0 !important;
+    color: #0b1a33 !important;
+  }
+
+  .bulletin-table tbody tr:nth-child(even),
+  .primary-subject-table tbody tr:nth-child(even) {
+    background: rgba(250, 251, 252, 0.8) !important;
+  }
+
+  .signature-line {
+    border-bottom: 1px solid #475569 !important;
+  }
+
+  .overall-average-row {
+    background: rgba(248, 250, 252, 0.9) !important;
+    border: 2px solid #0b1a33 !important;
+    margin-top: 4px !important;
+    padding: 4px 12px !important;
+  }
+
+  .homework-grades span {
+    background: transparent !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  /* Ensure background image covers entire page without cropping */
+  .print-bg {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    z-index: 0 !important;
+    background: white !important;
+  }
+
+  .print-content {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .bulletin-container {
+    padding: 24px;
+  }
+
+  .bulletin-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .bulletin-info {
+    text-align: center;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .selection-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .button-group {
+    width: 100%;
+  }
+  
+  .button-group button {
+    flex: 1;
+  }
+  
+  .signature-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .primary-subject-table {
+    font-size: 13px;
+  }
+  
+  .primary-subject-table thead th,
+  .primary-subject-table tbody td {
+    padding: 8px 10px;
+  }
+  
+  .overall-average-row {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .bulletin-container {
+    padding: 16px;
+  }
+
+  .bulletin-table {
+    font-size: 12px;
+  }
+  
+  .bulletin-table th,
+  .bulletin-table td {
+    padding: 8px 6px;
+  }
+  
+  .primary-subject-table {
+    font-size: 11px;
+  }
+  
+  .primary-subject-table thead th,
+  .primary-subject-table tbody td {
+    padding: 6px 4px;
+  }
+}
+
+/* vertical text styles */
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 2px;
+  padding: 8px 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b1a33;
+}
+
+@media print {
+  .vertical-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 6px 3px;
+  }
+}
